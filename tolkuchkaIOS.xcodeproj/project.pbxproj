@@ -11,6 +11,15 @@
 		FA70E4F32A05A165000D5FD9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70E4F22A05A165000D5FD9 /* ContentView.swift */; };
 		FA70E4F52A05A169000D5FD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA70E4F42A05A169000D5FD9 /* Assets.xcassets */; };
 		FA70E4F82A05A169000D5FD9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA70E4F72A05A169000D5FD9 /* Preview Assets.xcassets */; };
+		FA70E5002A064C4F000D5FD9 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70E4FF2A064C4F000D5FD9 /* Brand.swift */; };
+		FA70E5022A064FF8000D5FD9 /* MRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70E5012A064FF8000D5FD9 /* MRP.swift */; };
+		FA70E5072A0708EE000D5FD9 /* GetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70E5062A0708EE000D5FD9 /* GetData.swift */; };
+		FA70E50B2A08D39D000D5FD9 /* DecodeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70E50A2A08D39D000D5FD9 /* DecodeData.swift */; };
+		FAF036FA2A0D93D300DD25E2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAF036FC2A0D93D300DD25E2 /* Localizable.strings */; };
+		FAF036FF2A0D944900DD25E2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAF037012A0D944900DD25E2 /* Localizable.strings */; };
+		FAF037042A0D948C00DD25E2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAF037062A0D948C00DD25E2 /* Localizable.strings */; };
+		FAF037092A0EBA7E00DD25E2 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF037082A0EBA7E00DD25E2 /* Account.swift */; };
+		FAF0370B2A0ED62500DD25E2 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF0370A2A0ED62500DD25E2 /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +28,15 @@
 		FA70E4F22A05A165000D5FD9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FA70E4F42A05A169000D5FD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA70E4F72A05A169000D5FD9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FA70E4FF2A064C4F000D5FD9 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		FA70E5012A064FF8000D5FD9 /* MRP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRP.swift; sourceTree = "<group>"; };
+		FA70E5062A0708EE000D5FD9 /* GetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetData.swift; sourceTree = "<group>"; };
+		FA70E50A2A08D39D000D5FD9 /* DecodeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeData.swift; sourceTree = "<group>"; };
+		FAF036FB2A0D93D300DD25E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FAF037002A0D944900DD25E2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FAF037052A0D948C00DD25E2 /* tk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tk; path = tk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FAF037082A0EBA7E00DD25E2 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		FAF0370A2A0ED62500DD25E2 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +69,10 @@
 		FA70E4EF2A05A165000D5FD9 /* tolkuchkaIOS */ = {
 			isa = PBXGroup;
 			children = (
+				FAF037072A0EBA0500DD25E2 /* Views */,
+				FAF036F72A0D8E9300DD25E2 /* Local */,
+				FA70E5032A066B3C000D5FD9 /* Sources */,
+				FA70E4FE2A05A62D000D5FD9 /* Models */,
 				FA70E4F02A05A165000D5FD9 /* tolkuchkaIOSApp.swift */,
 				FA70E4F22A05A165000D5FD9 /* ContentView.swift */,
 				FA70E4F42A05A169000D5FD9 /* Assets.xcassets */,
@@ -65,6 +87,43 @@
 				FA70E4F72A05A169000D5FD9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FA70E4FE2A05A62D000D5FD9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA70E5012A064FF8000D5FD9 /* MRP.swift */,
+				FA70E4FF2A064C4F000D5FD9 /* Brand.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA70E5032A066B3C000D5FD9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FA70E5062A0708EE000D5FD9 /* GetData.swift */,
+				FA70E50A2A08D39D000D5FD9 /* DecodeData.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		FAF036F72A0D8E9300DD25E2 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				FAF036FC2A0D93D300DD25E2 /* Localizable.strings */,
+				FAF037012A0D944900DD25E2 /* Localizable.strings */,
+				FAF037062A0D948C00DD25E2 /* Localizable.strings */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		FAF037072A0EBA0500DD25E2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAF037082A0EBA7E00DD25E2 /* Account.swift */,
+				FAF0370A2A0ED62500DD25E2 /* Home.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,6 +168,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				tk,
 			);
 			mainGroup = FA70E4E42A05A165000D5FD9;
 			productRefGroup = FA70E4EE2A05A165000D5FD9 /* Products */;
@@ -125,7 +186,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF037042A0D948C00DD25E2 /* Localizable.strings in Resources */,
 				FA70E4F82A05A169000D5FD9 /* Preview Assets.xcassets in Resources */,
+				FAF036FF2A0D944900DD25E2 /* Localizable.strings in Resources */,
+				FAF036FA2A0D93D300DD25E2 /* Localizable.strings in Resources */,
 				FA70E4F52A05A169000D5FD9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,11 +202,44 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA70E4F32A05A165000D5FD9 /* ContentView.swift in Sources */,
+				FA70E50B2A08D39D000D5FD9 /* DecodeData.swift in Sources */,
+				FA70E5002A064C4F000D5FD9 /* Brand.swift in Sources */,
+				FA70E5072A0708EE000D5FD9 /* GetData.swift in Sources */,
 				FA70E4F12A05A165000D5FD9 /* tolkuchkaIOSApp.swift in Sources */,
+				FA70E5022A064FF8000D5FD9 /* MRP.swift in Sources */,
+				FAF0370B2A0ED62500DD25E2 /* Home.swift in Sources */,
+				FAF037092A0EBA7E00DD25E2 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FAF036FC2A0D93D300DD25E2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAF036FB2A0D93D300DD25E2 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		FAF037012A0D944900DD25E2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAF037002A0D944900DD25E2 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		FAF037062A0D948C00DD25E2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAF037052A0D948C00DD25E2 /* tk */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FA70E4F92A05A169000D5FD9 /* Debug */ = {
@@ -195,7 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -270,11 +367,14 @@
 				DEVELOPMENT_TEAM = VSJJ5472A3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,11 +399,14 @@
 				DEVELOPMENT_TEAM = VSJJ5472A3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
