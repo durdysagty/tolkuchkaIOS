@@ -7,14 +7,16 @@
 
 import SwiftUI
 
-struct Account: View {
+struct AccountView: View {
     var body: some View {
-        Text("account")
+        VStack{
+            Text("account")
+        }
     }
 }
 
-struct Account_Previews: PreviewProvider {
+struct AccountView_Previews: PreviewProvider {
     static var previews: some View {
-        Account()
+        AccountView()
     }
 }

@@ -6,16 +6,16 @@
 //
 
 import Foundation
-let host = "http://192.168.3.130:80/"
-//let host = "https://tolkuchka.bar/"
+let host = "http://192.168.0.107:80/"
+//let host = "http://tolkuchka.bar/"
 
-func getData<T: Decodable>(_ url: String, completion: @escaping ([T]) -> ()) -> T? {
+func getData<T: Decodable>(_ url: String, completion: @escaping (T) -> ()) -> T? {
     let base: String = "\(host)api/homeapp/"
     guard let url = URL(string: "\(base)\(url)") else {
         fatalError("Invalid URL")
     }
     URLSession.shared.dataTask(with: url) { (data, _, _) in
-        guard let d = try? JSONDecoder().decode([T].self, from: data!)
+        guard let d = try? JSONDecoder().decode(T.self, from: data!)
         else {
             fatalError("Somthing went wrong!")
         }
