@@ -9,68 +9,69 @@ import SwiftUI
 import WebKit
 
 struct HomeView: View {
-    @State var index: Index = Index(categories: [], brands: [])
-    
+    @Environment(\.horizontalSizeClass) var sizeClass
+    @State var index: Index = Index(categories: [], brands: [], slides: [], appIndexItems: [])
     
     var body: some View {
         ScrollView (.vertical){
-            VStack(alignment: .leading) {
-                ScrollView (.horizontal, showsIndicators: false) {
-                    HStack (alignment: .top){
-                        ForEach(self.index.categories, id: \.id) {
-                            category in
-                            NavigationLink {
-                                CategoryView(category: category)
-                            } label: {
-                                VStack {
-                                    AsyncImage(url: URL(string: "\(host)svgs/category/\(category.id).png")){ image in
-                                        image
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(maxHeight: 25)
-                                    } placeholder: {
-                                        ProgressView()
-                                    }
-                                    Text(getLocalName(ru: category.nameRu, en: category.nameEn, tm: category.nameTm))
-                                        .padding(.top, -12)
-                                }
-                            }
-                            .accentColor(.black)
+            ScrollView (.horizontal, showsIndicators: false) {
+                HStack (alignment: .top){
+                    ForEach(self.index.brands, id: \.id) {
+                        brand in
+                        NavigationLink {
+                            BrandView(brand: brand)
+                        } label: {
+                            SharedBrandView(brand: brand)
                         }
                     }
                 }
-                VStack(alignment: .leading) {
-                    ScrollView (.horizontal, showsIndicators: false) {
-                        HStack (alignment: .top){
-                            ForEach(self.index.brands, id: \.id) {
-                                brand in
-                                NavigationLink {
-                                    BrandView(brand: brand)
-                                } label: {
-                                    AsyncImage(url: URL(string: "\(host)images/brand/\(brand.id)-0.webp?v=\(brand.version)")){ image in
-                                        image
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(maxHeight: 40)
-                                    } placeholder: {
-                                        ProgressView()
-                                    }
-                                }
-                                .accentColor(.black)
-                                .padding()
-                                //.border(.black)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 16)
-                                        .stroke(Color(red: 241 / 255, green: 140 / 255, blue: 41 / 255))
-                                )
-                            }
-                        }
-                    }
-                }
-                .padding(.top, 10)
             }
-            
-            
+            if (sizeClass == .compact) {
+                VStack {
+                    ForEach(self.index.slides, id: \.id) {
+                        slide in
+                        SharedSlideView(slide: slide)
+                            .cornerRadius(7)
+                    }
+                }
+            }
+            else {
+                HStack {
+                    ForEach(self.index.slides, id: \.id) {
+                        slide in
+                        SharedSlideView(slide: slide)
+                            .cornerRadius(16)
+                    }
+                }
+            }
+            ForEach(self.index.appIndexItems, id: \.productsModel.uniqId) {
+                item in
+                NavigationLink {
+                    ProductsView(model: item.productsModel)
+                } label: {
+                    HStack {
+                        AsyncImage(url: URL(string: item.productsModel.model == "novelties" || item.productsModel.model == "recommended" ? "\(host)svgs/\(item.productsModel.model!).png" :  "\(host)svgs/\(item.productsModel.model!)/\(item.productsModel.id).png")){ image in
+                            image
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: sizeClass == .compact ? 15 : 25)
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        Text(item.productsModel.modelName ?? "")
+                        Spacer()
+                    }
+//                    .frame(minWidth: sizeClass == .compact ? 50 : 120)
+                    .accentColor(.black)
+                }
+                HStack {
+                    ForEach(item.products, id: \.count) {
+                        ps in
+                        Text(String(ps[0].name))
+                        Text(String(ps[0].price))
+                    }
+                }
+            }
         }
         .onAppear {
             let _: Index? = getData("items", completion: { index in
@@ -78,11 +79,13 @@ struct HomeView: View {
             })
         }
     }
-    
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        ForEach(["iPhone 14 Pro", "iPad Pro (12.9-inch) (2nd generation)"], id: \.self) { deviceName in
+            HomeView()
+                .previewDevice(PreviewDevice(rawValue: deviceName))
+        }
     }
 }

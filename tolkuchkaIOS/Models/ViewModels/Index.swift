@@ -10,4 +10,6 @@ import Foundation
 struct Index: Codable {
     var categories: [Category]
     var brands: [Brand]
+    var slides: [Slide]
+    var appIndexItems: [AppIndexItem]
 }

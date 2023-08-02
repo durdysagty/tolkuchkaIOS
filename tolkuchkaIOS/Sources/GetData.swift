@@ -6,23 +6,51 @@
 //
 
 import Foundation
-let host = "http://192.168.0.107:80/"
-//let host = "http://tolkuchka.bar/"
+import SwiftUI
+let host = "http://192.168.0.101:80/"
+//let host = "https://tolkuchka.bar/"
 
-func getData<T: Decodable>(_ url: String, completion: @escaping (T) -> ()) -> T? {
+struct MyGlobals {
+    static var uniqId: Int = 0
+}
+
+func getId() -> Int {
+    print(MyGlobals.uniqId)
+    MyGlobals.uniqId += 1
+    return MyGlobals.uniqId
+}
+
+func getData<T: Decodable>(_ url: String,/* _ sizeClass: UserInterfaceSizeClass?,*/ completion: @escaping (T) -> ()) -> T? {
     let base: String = "\(host)api/homeapp/"
     guard let url = URL(string: "\(base)\(url)") else {
         fatalError("Invalid URL")
     }
-    URLSession.shared.dataTask(with: url) { (data, _, _) in
-        guard let d = try? JSONDecoder().decode(T.self, from: data!)
-        else {
-            fatalError("Somthing went wrong!")
+    //    @Environment(\.horizontalSizeClass) var sizeClass
+    //    let cookies = HTTPCookie.cookies(withResponseHeaderFields: ["Set-Cookie": "w=\(sizeClass ?? .compact)"], for: url)
+    //    HTTPCookieStorage.shared.setCookies(cookies, for: url, mainDocumentURL: url)
+    URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+        do {
+            let d = try JSONDecoder().decode(T.self, from: data!)
+            DispatchQueue.main.async {
+                completion(d)
+            }
+        } catch let jsonError as NSError {
+            print("JSON decode failed: \(jsonError.localizedDescription)")
         }
-        DispatchQueue.main.async {
-            completion(d)
-        }
-    }.resume()
+        
+        
+        
+        
+        //        guard let d = try? JSONDecoder().decode(T.self, from: data!)
+        //        else {
+        //            print(error ?? "Some error")
+        ////            Text(error.self!.localizedDescription)
+        //            fatalError("Somthing went wrong!")
+        //        //        }
+        //        DispatchQueue.main.async {
+        //            completion(d)
+        //        }
+    }).resume()
     return nil
 }
 
