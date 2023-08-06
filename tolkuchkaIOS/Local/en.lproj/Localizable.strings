@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  tolkuchkaIOS
+
+  Created by MacBook on 12.05.2023.
+  
+*/
+"cart" = "Cart";
+"cats" = "Categories";
+"comparison" = "Comparison";
+"back" = "Back";
+"brands" = "Brands";
+"home" = "Home";
+"login" = "Login";
+"menu" = "Menu";
+"search" = "Search";

@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  tolkuchkaIOS
+
+  Created by MacBook on 12.05.2023.
+  
+*/
+"cart" = "Корзина";
+"cats" = "Категории";
+"comparison" = "Сравнение";
+"back" = "Назад";
+"brands" = "Бренды";
+"home" = "Домой";
+"login" = "Вход";
+"menu" = "Меню";
+"search" = "Поиск";
