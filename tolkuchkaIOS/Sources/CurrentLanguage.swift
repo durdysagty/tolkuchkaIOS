@@ -36,3 +36,17 @@ func getLocalNumber() -> Int {
         return 0
     }
 }
+
+func getLocal() -> String {
+    let lang: String = Locale.current.languageCode!
+    switch lang {
+    case "ru":
+        return "ru."
+    case "en" :
+        return "en."
+    case "tk":
+        return "tm."
+    default:
+        return "ru."
+    }
+}

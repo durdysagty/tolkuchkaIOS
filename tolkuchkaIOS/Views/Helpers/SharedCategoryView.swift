@@ -13,7 +13,7 @@ struct SharedCategoryView: View {
     
     var body: some View {
             VStack {
-                AsyncImage(url: URL(string: "\(host)svgs/category/\(category.id).png")){ image in
+                AsyncImage(url: URL(string: "\(host)svgs/category/\(String(format: "%d", category.id)).png")){ image in
                     image
                         .resizable()
                         .scaledToFit()

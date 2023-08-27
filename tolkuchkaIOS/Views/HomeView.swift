@@ -22,6 +22,7 @@ struct HomeView: View {
                             BrandView(brand: brand)
                         } label: {
                             SharedBrandView(brand: brand)
+                                .frame(maxHeight: sizeClass == .compact ? 50 : 80)
                         }
                     }
                 }
@@ -61,14 +62,16 @@ struct HomeView: View {
                         Text(item.productsModel.modelName ?? "")
                         Spacer()
                     }
-//                    .frame(minWidth: sizeClass == .compact ? 50 : 120)
                     .accentColor(.black)
                 }
-                HStack {
-                    ForEach(item.products, id: \.count) {
-                        ps in
-                        Text(String(ps[0].name))
-                        Text(String(ps[0].price))
+                ScrollView (.horizontal, showsIndicators: false) {
+                    HStack (alignment: .top){
+                        ForEach(0..<item.products.count, id: \.self) { index in
+                            let ps = item.products[index]
+                            HStack {
+                                SharedProductView(products: ps)
+                            }
+                        }
                     }
                 }
             }

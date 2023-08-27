@@ -12,11 +12,12 @@ struct SharedBrandView: View {
     var brand: Brand
     
     var body: some View {
-        AsyncImage(url: URL(string: "\(host)images/brand/\(brand.id)-0.webp?v=\(brand.version)")){ image in
+        AsyncImage(url: getImage(imageFolder: "brand", id: brand.id, imageIndex: 0, version: brand.version)){ image in
             image
                 .resizable()
+                .aspectRatio(contentMode: .fit)
                 .scaledToFit()
-                .frame(maxHeight: sizeClass == .compact ? 25 : 40)
+//                .frame(maxHeight: sizeClass == .compact ? 25 : 40)
         } placeholder: {
             ProgressView()
         }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Brand: PAppProductsModel, MRP {
+struct Brand: PAppProductsModel, MRP, Hashable {
     var id: Int
     var version: Int
     var name: String

@@ -11,8 +11,9 @@ struct BrandView: View {
     var brand: Brand
     
     var body: some View {
-        VStack {
+        HStack {
             Text(brand.name)
+            Spacer()
         }
     }
 }

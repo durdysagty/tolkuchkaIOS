@@ -9,7 +9,16 @@
 /* Begin PBXBuildFile section */
 		FA0472D82A12C20000E1E260 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0472D72A12C20000E1E260 /* Category.swift */; };
 		FA0472DB2A12C28400E1E260 /* Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0472DA2A12C28400E1E260 /* Index.swift */; };
-		FA0472DE2A15020900E1E260 /* SVGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0472DD2A15020900E1E260 /* SVGViewController.swift */; };
+		FA5231A52A814E1C00A94827 /* TestUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5231A42A814E1C00A94827 /* TestUIView.swift */; };
+		FA5231A72A81613E00A94827 /* FlexibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5231A62A81613E00A94827 /* FlexibleView.swift */; };
+		FA5231A92A88CA4B00A94827 /* SideSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5231A82A88CA4B00A94827 /* SideSheetView.swift */; };
+		FA5231AB2A8F5AD800A94827 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5231AA2A8F5AD800A94827 /* CategoriesView.swift */; };
+		FA5231AD2A8F5C7600A94827 /* CategoryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5231AC2A8F5C7600A94827 /* CategoryTree.swift */; };
+		FA5434972A7F933D00C90497 /* SharedProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5434962A7F933D00C90497 /* SharedProductView.swift */; };
+		FA54349A2A7FCE0D00C90497 /* FASwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FA5434992A7FCE0D00C90497 /* FASwiftUI */; };
+		FA54349E2A7FD1CD00C90497 /* icons.json in Resources */ = {isa = PBXBuildFile; fileRef = FA54349D2A7FD1CD00C90497 /* icons.json */; };
+		FA54349F2A7FD2CD00C90497 /* fa-regular-400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA54349C2A7FD17E00C90497 /* fa-regular-400.ttf */; };
+		FA5434A92A7FFCC200C90497 /* fa-solid-900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA5434A82A7FFCC200C90497 /* fa-solid-900.ttf */; };
 		FA70E4F12A05A165000D5FD9 /* tolkuchkaIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70E4F02A05A165000D5FD9 /* tolkuchkaIOSApp.swift */; };
 		FA70E4F32A05A165000D5FD9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70E4F22A05A165000D5FD9 /* ContentView.swift */; };
 		FA70E4F52A05A169000D5FD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA70E4F42A05A169000D5FD9 /* Assets.xcassets */; };
@@ -29,6 +38,7 @@
 		FAD8DB312A656BAA00B4ECCD /* AppIndexItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8DB302A656BAA00B4ECCD /* AppIndexItem.swift */; };
 		FAD8DB332A6864F700B4ECCD /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8DB322A6864F700B4ECCD /* ProductsView.swift */; };
 		FAD8DB352A68961D00B4ECCD /* AppProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD8DB342A68961D00B4ECCD /* AppProductsModel.swift */; };
+		FAE5A0352A99028E001B84D8 /* BrandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5A0342A99028E001B84D8 /* BrandsView.swift */; };
 		FAF036FA2A0D93D300DD25E2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAF036FC2A0D93D300DD25E2 /* Localizable.strings */; };
 		FAF036FF2A0D944900DD25E2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAF037012A0D944900DD25E2 /* Localizable.strings */; };
 		FAF037042A0D948C00DD25E2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAF037062A0D948C00DD25E2 /* Localizable.strings */; };
@@ -39,7 +49,15 @@
 /* Begin PBXFileReference section */
 		FA0472D72A12C20000E1E260 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		FA0472DA2A12C28400E1E260 /* Index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Index.swift; sourceTree = "<group>"; };
-		FA0472DD2A15020900E1E260 /* SVGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGViewController.swift; sourceTree = "<group>"; };
+		FA5231A42A814E1C00A94827 /* TestUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIView.swift; sourceTree = "<group>"; };
+		FA5231A62A81613E00A94827 /* FlexibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleView.swift; sourceTree = "<group>"; };
+		FA5231A82A88CA4B00A94827 /* SideSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideSheetView.swift; sourceTree = "<group>"; };
+		FA5231AA2A8F5AD800A94827 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		FA5231AC2A8F5C7600A94827 /* CategoryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTree.swift; sourceTree = "<group>"; };
+		FA5434962A7F933D00C90497 /* SharedProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedProductView.swift; sourceTree = "<group>"; };
+		FA54349C2A7FD17E00C90497 /* fa-regular-400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-regular-400.ttf"; sourceTree = "<group>"; };
+		FA54349D2A7FD1CD00C90497 /* icons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = icons.json; sourceTree = "<group>"; };
+		FA5434A82A7FFCC200C90497 /* fa-solid-900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-solid-900.ttf"; sourceTree = "<group>"; };
 		FA70E4ED2A05A165000D5FD9 /* tolkuchkaIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tolkuchkaIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA70E4F02A05A165000D5FD9 /* tolkuchkaIOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tolkuchkaIOSApp.swift; sourceTree = "<group>"; };
 		FA70E4F22A05A165000D5FD9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +78,7 @@
 		FAD8DB302A656BAA00B4ECCD /* AppIndexItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIndexItem.swift; sourceTree = "<group>"; };
 		FAD8DB322A6864F700B4ECCD /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
 		FAD8DB342A68961D00B4ECCD /* AppProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProductsModel.swift; sourceTree = "<group>"; };
+		FAE5A0342A99028E001B84D8 /* BrandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandsView.swift; sourceTree = "<group>"; };
 		FAF036FB2A0D93D300DD25E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FAF037002A0D944900DD25E2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FAF037052A0D948C00DD25E2 /* tk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tk; path = tk.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -72,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA54349A2A7FCE0D00C90497 /* FASwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,12 +109,24 @@
 		FA0472DC2A1501C000E1E260 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				FA0472DD2A15020900E1E260 /* SVGViewController.swift */,
 				FA99ECF92A518CE400AFDBA9 /* SharedBrandView.swift */,
 				FA99ECFB2A5482FA00AFDBA9 /* SharedCategoryView.swift */,
 				FAD8DB2A2A5AC4D800B4ECCD /* SharedSlideView.swift */,
+				FA5434962A7F933D00C90497 /* SharedProductView.swift */,
+				FA5231A62A81613E00A94827 /* FlexibleView.swift */,
+				FA5231A82A88CA4B00A94827 /* SideSheetView.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FA54349B2A7FD0EF00C90497 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				FA54349D2A7FD1CD00C90497 /* icons.json */,
+				FA5434A82A7FFCC200C90497 /* fa-solid-900.ttf */,
+				FA54349C2A7FD17E00C90497 /* fa-regular-400.ttf */,
+			);
+			path = Icons;
 			sourceTree = "<group>";
 		};
 		FA70E4E42A05A165000D5FD9 = {
@@ -116,6 +148,7 @@
 		FA70E4EF2A05A165000D5FD9 /* tolkuchkaIOS */ = {
 			isa = PBXGroup;
 			children = (
+				FA54349B2A7FD0EF00C90497 /* Icons */,
 				FAF037072A0EBA0500DD25E2 /* Views */,
 				FAF036F72A0D8E9300DD25E2 /* Local */,
 				FA70E5032A066B3C000D5FD9 /* Sources */,
@@ -148,6 +181,7 @@
 				FAD8DB2C2A5D5EFB00B4ECCD /* UIProduct.swift */,
 				FAD8DB302A656BAA00B4ECCD /* AppIndexItem.swift */,
 				FAD8DB342A68961D00B4ECCD /* AppProductsModel.swift */,
+				FA5231AC2A8F5C7600A94827 /* CategoryTree.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -178,8 +212,11 @@
 				FAF037082A0EBA7E00DD25E2 /* AccountView.swift */,
 				FAF0370A2A0ED62500DD25E2 /* HomeView.swift */,
 				FA99ECF52A16AD8700AFDBA9 /* CategoryView.swift */,
+				FA5231AA2A8F5AD800A94827 /* CategoriesView.swift */,
+				FAE5A0342A99028E001B84D8 /* BrandsView.swift */,
 				FA99ECF72A16B7A500AFDBA9 /* BrandView.swift */,
 				FAD8DB322A6864F700B4ECCD /* ProductsView.swift */,
+				FA5231A42A814E1C00A94827 /* TestUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +237,9 @@
 			dependencies = (
 			);
 			name = tolkuchkaIOS;
+			packageProductDependencies = (
+				FA5434992A7FCE0D00C90497 /* FASwiftUI */,
+			);
 			productName = tolkuchkaIOS;
 			productReference = FA70E4ED2A05A165000D5FD9 /* tolkuchkaIOS.app */;
 			productType = "com.apple.product-type.application";
@@ -230,6 +270,9 @@
 				tk,
 			);
 			mainGroup = FA70E4E42A05A165000D5FD9;
+			packageReferences = (
+				FA5434982A7FCE0D00C90497 /* XCRemoteSwiftPackageReference "FASwiftUI" */,
+			);
 			productRefGroup = FA70E4EE2A05A165000D5FD9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -244,8 +287,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA54349E2A7FD1CD00C90497 /* icons.json in Resources */,
+				FA5434A92A7FFCC200C90497 /* fa-solid-900.ttf in Resources */,
 				FAF037042A0D948C00DD25E2 /* Localizable.strings in Resources */,
 				FA70E4F82A05A169000D5FD9 /* Preview Assets.xcassets in Resources */,
+				FA54349F2A7FD2CD00C90497 /* fa-regular-400.ttf in Resources */,
 				FAF036FF2A0D944900DD25E2 /* Localizable.strings in Resources */,
 				FAF036FA2A0D93D300DD25E2 /* Localizable.strings in Resources */,
 				FA70E4F52A05A169000D5FD9 /* Assets.xcassets in Resources */,
@@ -262,22 +308,28 @@
 				FA70E4F32A05A165000D5FD9 /* ContentView.swift in Sources */,
 				FAD8DB352A68961D00B4ECCD /* AppProductsModel.swift in Sources */,
 				FA99ECFA2A518CE400AFDBA9 /* SharedBrandView.swift in Sources */,
+				FA5231AD2A8F5C7600A94827 /* CategoryTree.swift in Sources */,
 				FA70E50B2A08D39D000D5FD9 /* CurrentLanguage.swift in Sources */,
 				FA70E5002A064C4F000D5FD9 /* Brand.swift in Sources */,
 				FA70E5072A0708EE000D5FD9 /* GetData.swift in Sources */,
+				FA5231AB2A8F5AD800A94827 /* CategoriesView.swift in Sources */,
 				FA0472DB2A12C28400E1E260 /* Index.swift in Sources */,
+				FA5434972A7F933D00C90497 /* SharedProductView.swift in Sources */,
 				FA99ECF82A16B7A500AFDBA9 /* BrandView.swift in Sources */,
 				FAD8DB2B2A5AC4D800B4ECCD /* SharedSlideView.swift in Sources */,
 				FAD8DB292A5A01B100B4ECCD /* Slide.swift in Sources */,
+				FA5231A92A88CA4B00A94827 /* SideSheetView.swift in Sources */,
 				FA70E4F12A05A165000D5FD9 /* tolkuchkaIOSApp.swift in Sources */,
-				FA0472DE2A15020900E1E260 /* SVGViewController.swift in Sources */,
 				FAD8DB332A6864F700B4ECCD /* ProductsView.swift in Sources */,
 				FA99ECFC2A5482FA00AFDBA9 /* SharedCategoryView.swift in Sources */,
 				FA0472D82A12C20000E1E260 /* Category.swift in Sources */,
 				FAD8DB312A656BAA00B4ECCD /* AppIndexItem.swift in Sources */,
+				FA5231A52A814E1C00A94827 /* TestUIView.swift in Sources */,
 				FAD8DB2D2A5D5EFB00B4ECCD /* UIProduct.swift in Sources */,
 				FA70E5022A064FF8000D5FD9 /* MRP.swift in Sources */,
+				FA5231A72A81613E00A94827 /* FlexibleView.swift in Sources */,
 				FAF0370B2A0ED62500DD25E2 /* HomeView.swift in Sources */,
+				FAE5A0352A99028E001B84D8 /* BrandsView.swift in Sources */,
 				FAD8DB2F2A6028E700B4ECCD /* Promotion.swift in Sources */,
 				FAF037092A0EBA7E00DD25E2 /* AccountView.swift in Sources */,
 				FA99ECF62A16AD8700AFDBA9 /* CategoryView.swift in Sources */,
@@ -439,6 +491,7 @@
 				DEVELOPMENT_TEAM = VSJJ5472A3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = tolkuchkaIOS/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -471,6 +524,7 @@
 				DEVELOPMENT_TEAM = VSJJ5472A3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = tolkuchkaIOS/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -514,6 +568,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA5434982A7FCE0D00C90497 /* XCRemoteSwiftPackageReference "FASwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mattmaddux/FASwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA5434992A7FCE0D00C90497 /* FASwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA5434982A7FCE0D00C90497 /* XCRemoteSwiftPackageReference "FASwiftUI" */;
+			productName = FASwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA70E4E52A05A165000D5FD9 /* Project object */;
 }

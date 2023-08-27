@@ -13,7 +13,7 @@ struct SharedSlideView: View {
     
     var body: some View {
         Link (destination: URL(string: slide.link)!) {
-            AsyncImage(url: URL(string: "\(host)images/slide/\(slide.id)-0.webp?v=\(slide.version)")){ image in
+            AsyncImage(url: getImage(imageFolder: "slide", id: slide.id, imageIndex: getLocalNumber(), version: slide.version)){ image in
                 image
                     .resizable()
                     .scaledToFit()
