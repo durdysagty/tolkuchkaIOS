@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UIProduct: MRP {
+struct UIProduct: MRP, Hashable {
     var id: Int
     var version: Int
     var name: String
@@ -17,4 +17,9 @@ struct UIProduct: MRP {
     var recommended: String?
     var new: String?
     var promotions: [Promotion]
+
+    
+    static func == (lhs: UIProduct, rhs: UIProduct) -> Bool {
+        return lhs.id == rhs.id
+    }
 }

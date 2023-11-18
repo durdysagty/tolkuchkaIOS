@@ -9,7 +9,7 @@ import Foundation
 
 enum Tp: Int, Codable { case discount, quantityDiscount, quantityFree, qroductFree, set, setDiscount, specialSetDiscount, special }
 
-struct Promotion: PAppProductsModel, MRP {
+struct Promotion: PAppProductsModel, MRP, Hashable {
     var id: Int
     var version: Int
     var type: Tp
@@ -21,6 +21,10 @@ struct Promotion: PAppProductsModel, MRP {
     var model: String?
     var modelName: String?
     var uniqId: Int
+
+    static func == (lhs: Promotion, rhs: Promotion) -> Bool {
+        return lhs.id == rhs.id
+    }
 
     enum CodingKeys: String, CodingKey {
         case id, version, type, volume, quantity, subjectId, name, desc

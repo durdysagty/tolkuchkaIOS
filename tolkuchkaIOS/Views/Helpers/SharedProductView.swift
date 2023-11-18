@@ -4,7 +4,7 @@ import FASwiftUI
 struct SharedProductView: View {
     var products: [UIProduct]
     @State private var displayedIndex = 0
-    let buttonImage: CGFloat = 30
+    let buttonImage: CGFloat = 25
     let buttonFontSize: CGFloat = 14
 
     var body: some View {
@@ -17,7 +17,7 @@ struct SharedProductView: View {
                         image
                             .resizable()
                             .scaledToFit()
-                            .frame(height: 200)
+                            .frame(height: 155)
                     } placeholder: {
                         ProgressView()
                     }
@@ -33,96 +33,98 @@ struct SharedProductView: View {
                                 ) { badge in
                                     BadgeView(text: badge.text, backgroundColor: badge.backgroundColor, textColor: badge.textColor)
                                 }
-                                //                                .padding(.horizontal, 10)
                             }
                         }
                     )
                 }
                 .scaledToFit()
                 ScrollView (.vertical, showsIndicators: false) {
-                    Button(action: {
-                        // Add your heart button action here
-                    }) {
-                        FAText(iconName: "cart-plus", size: buttonFontSize, style: FAStyle.solid)
-                            .frame(width: buttonImage, height: buttonImage)
-                            .foregroundColor(.white)
-                            .background(Color(red: 241.0 / 255.0, green: 140.0 / 255.0, blue: 41.0 / 255.0))
-                            .cornerRadius(8)
-                    }
-                    Button(action: {
-                        // Add your heart button action here
-                    }) {
-                        FAText(iconName: "heart", size: buttonFontSize, style: FAStyle.solid)
-                            .frame(width: buttonImage, height: buttonImage)
-                            .foregroundColor(.white)
-                            .background(Color(red: 241.0 / 255.0, green: 140.0 / 255.0, blue: 41.0 / 255.0))
-                            .cornerRadius(8)
-                    }
-                    Button(action: {
-                        // Add your heart button action here
-                    }) {
-                        FAText(iconName: "scale-balanced", size: buttonFontSize, style: FAStyle.solid)
-                            .frame(width: buttonImage, height: buttonImage)
-                            .foregroundColor(.white)
-                            .background(Color(red: 241.0 / 255.0, green: 140.0 / 255.0, blue: 41.0 / 255.0))
-                            .cornerRadius(8)
-                    }
-                    if !products.dropFirst().isEmpty {
-                        ForEach(products.indices, id: \.self) { index in
-                            Button(action: {
-                                displayedIndex = index
-                            }) {
-                                AsyncImage(
-                                    url: URL(string: "\(host)\(products[index].imageMain)webp?v=\(products[index].version)")
-                                ) { image in
-                                    image
-                                        .resizable()
-                                        .scaledToFit()
-                                } placeholder: {
-                                    ProgressView()
-                                }
+                    VStack (spacing: 1) {
+                        Button(action: {
+                            // Add your heart button action here
+                        }) {
+                            FAText(iconName: "cart-plus", size: buttonFontSize, style: FAStyle.solid)
                                 .frame(width: buttonImage, height: buttonImage)
                                 .foregroundColor(.white)
                                 .background(Color(red: 241.0 / 255.0, green: 140.0 / 255.0, blue: 41.0 / 255.0))
-                                .cornerRadius(8)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 8)
-                                        .stroke(index == displayedIndex ? Color.blue : Color.clear, lineWidth: 2)
-                                )
+                                .cornerRadius(3)
+                        }
+                        Button(action: {
+                            // Add your heart button action here
+                        }) {
+                            FAText(iconName: "heart", size: buttonFontSize, style: FAStyle.solid)
+                                .frame(width: buttonImage, height: buttonImage)
+                                .foregroundColor(.white)
+                                .background(Color(red: 241.0 / 255.0, green: 140.0 / 255.0, blue: 41.0 / 255.0))
+                                .cornerRadius(3)
+                        }
+                        Button(action: {
+                            // Add your heart button action here
+                        }) {
+                            FAText(iconName: "scale-balanced", size: buttonFontSize, style: FAStyle.solid)
+                                .frame(width: buttonImage, height: buttonImage)
+                                .foregroundColor(.white)
+                                .background(Color(red: 241.0 / 255.0, green: 140.0 / 255.0, blue: 41.0 / 255.0))
+                                .cornerRadius(3)
+                        }
+                        if !products.dropFirst().isEmpty {
+                            ForEach(products.indices, id: \.self) { index in
+                                Button(action: {
+                                    displayedIndex = index
+                                }) {
+                                    AsyncImage(
+                                        url: URL(string: "\(host)\(products[index].imageMain)webp?v=\(products[index].version)")
+                                    ) { image in
+                                        image
+                                            .resizable()
+                                            .scaledToFit()
+                                    } placeholder: {
+                                        ProgressView()
+                                    }
+                                    .frame(width: buttonImage, height: buttonImage)
+                                    .foregroundColor(.white)
+                                    .background(Color(red: 241.0 / 255.0, green: 140.0 / 255.0, blue: 41.0 / 255.0))
+                                    .cornerRadius(3)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 2)
+                                            .stroke(index == displayedIndex ? Color.blue : Color.clear, lineWidth: 0.5)
+                                    )
+                                }
                             }
                         }
                     }
                 }
-                .frame(height: 205)
-                //                .padding(.horizontal, 8)
+                .frame(height: 160)
             }
             .fixedSize(horizontal: false, vertical: true)
             HStack {
                 Text(products[displayedIndex].name)
                     .lineLimit(2)
-                    .font(.system(size: 14))
-                    .padding(.bottom, 2)
+                    .font(.system(size: 9))
+                    .padding(.bottom, 0.2)
             }
-            .frame(maxWidth: 250)
+            .frame(maxWidth: 190)
             //            .fixedSize(horizontal: true, vertical: false)
             HStack{
                 Spacer()
                 if (products[displayedIndex].newPrice == nil)
                 {
                     Text("TMT \(String(format: "%.2f", products[displayedIndex].price))")
-                        .font(.system(size: 15))
+                        .font(.system(size: 10))
                 }
                 else {
                     Text("\(String(format: "%.2f", products[displayedIndex].price))")
-                        .font(.system(size: 12))
+                        .font(.system(size: 8))
                         .strikethrough(true, color: .red)
                     Text("TMT \(String(format: "%.2f", products[displayedIndex].newPrice!))")
-                        .font(.system(size: 15))
+                        .font(.system(size: 10))
                 }
             }
         }
         .fixedSize(horizontal: true, vertical: true)
-        .frame(width: 250, height: 300)
+                .frame(width: 187, height: 200)
+                .padding(.trailing, 5)
+                .padding(.bottom, 8)
     }
 
     struct BadgeData: Identifiable, Hashable, Equatable {
@@ -171,11 +173,11 @@ struct BadgeView: View {
 
     var body: some View {
         Text(text)
-            .font(.system(size: 10))
+            .font(.system(size: 12))
             .foregroundColor(textColor)
-            .padding(0)
+            .padding(0.5)
             .background(backgroundColor)
-            .clipShape(RoundedRectangle(cornerRadius: 4))
+            .clipShape(RoundedRectangle(cornerRadius: 2))
     }
 }
 

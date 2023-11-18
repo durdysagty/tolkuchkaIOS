@@ -46,7 +46,6 @@ struct CategoriesView: View {
                                 .padding(.bottom, 1)
                                 .font(.system(size: 28))
                         }
-                        .accentColor(.black)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     //second level
@@ -85,8 +84,8 @@ struct CategoriesView: View {
                     }
                 }
             }
-            //            Text("Horizontal size class: \(horizontalSizeClass.debugDescription)")
-            //            Text("Vertical size class: \(verticalSizeClass.debugDescription)")
+            .padding(.bottom, 55)
+            .padding(.top, 15)
         }
         .onAppear {
             let _: [CategoryTree]? = getData("categories", completion: { categories in

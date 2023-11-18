@@ -16,7 +16,7 @@ struct MyGlobals {
 }
 
 func getId() -> Int {
-    print(MyGlobals.uniqId)
+    //    print(MyGlobals.uniqId)
     MyGlobals.uniqId += 1
     return MyGlobals.uniqId
 }
@@ -31,7 +31,7 @@ func getData<T: Decodable>(_ url: String, completion: @escaping (T) -> ()) -> T?
             print("Network request failed: \(err.localizedDescription)")
             return
         }
-
+        
         guard let validData = data else {
             print("No data received from the server")
             return
@@ -39,16 +39,18 @@ func getData<T: Decodable>(_ url: String, completion: @escaping (T) -> ()) -> T?
 #if DEBUG
         // Convert data to string and print it
         if let stringData = String(data: validData, encoding: .utf8) {
+            print("url: \(url)")
             print(stringData)
         }
-        #endif
-
+#endif
+        
         do {
             let d = try JSONDecoder().decode(T.self, from: validData)
             DispatchQueue.main.async {
                 completion(d)
             }
         } catch let jsonError as NSError {
+            print("url: \(url)")
             print("JSON decode failed: \(jsonError.localizedDescription)")
         }
     }).resume()
@@ -60,5 +62,10 @@ func getImage(imageFolder: String, id: Int, imageIndex: Int, version: Int) -> UR
     let imageIndexString = String(format: "%d", imageIndex)
     let versionString = String(format: "%d", version)
     let urlString = "\(host)images/\(imageFolder)/\(idString)-\(imageIndexString).webp?v=\(versionString)"
+    return URL(string: urlString)
+}
+
+func getImageByString(path: String, versionString: Int) -> URL?{
+    let urlString = "\(host)\(path)webp?v=\(versionString)"
     return URL(string: urlString)
 }

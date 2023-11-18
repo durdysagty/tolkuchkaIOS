@@ -1,13 +1,14 @@
 //
-//  Brand.swift
+//  Type.swift
 //  tolkuchkaIOS
 //
-//  Created by MacBook on 06.05.2023.
+//  Created by MacBook on 06.11.2023.
 //
 
 import Foundation
 
-struct Brand: PAppProductsModel, MRP {
+
+struct Tipe: PAppProductsModel, MRP {
     var id: Int
     var version: Int
     var name: String
@@ -34,7 +35,7 @@ struct Brand: PAppProductsModel, MRP {
         version = try container.decode(Int.self, forKey: .version)
         name = try container.decode(String.self, forKey: .name)
         model = "brand"
-        modelName = try container.decode(String.self, forKey: .name)
+        name = try container.decode(String.self, forKey: .name)
         uniqId = getId()
     }
 }

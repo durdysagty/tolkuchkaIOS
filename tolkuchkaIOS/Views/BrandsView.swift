@@ -40,7 +40,7 @@ struct BrandsView: View {
                             ProductsView(model: AppProductsModel(model: "brand", id: brand.id, modelName: brand.name))
                         } label: {
                             NavigationLink {
-                                BrandView(brand: brand)
+                                ProductsView(model: brand)
                             } label: {
                                 SharedBrandView(brand: brand)
                             }
@@ -50,9 +50,12 @@ struct BrandsView: View {
                     }
                 }
             }
+            .padding(.bottom, 55)
             .onAppear {
                 let _: [Brand]? = getData("brands", completion: { brands in
+                    #if DEBUG
                     print(brands)
+                    #endif
                     self.brands = brands
                 })
             }

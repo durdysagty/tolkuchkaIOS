@@ -8,7 +8,7 @@
 "cart" = "Cart";
 "cats" = "Categories";
 "comparison" = "Comparison";
-"back" = "Back";
+"back" = "Backe";
 "brands" = "Brands";
 "home" = "Home";
 "login" = "Login";
@@ -16,3 +16,4 @@
 "menu" = "Menu";
 "recommended" = "Recommended";
 "search" = "Search";
+//"noProduct" = "Sorry, there are no products matching your selection!";
