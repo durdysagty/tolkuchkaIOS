@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+FASwiftUI in FASwiftUI, no dependencies
+FASwiftUI in FASwiftUI, depends on:
+FASwiftUI in FASwiftUI (explicit)
+tolkuchkaIOS in tolkuchkaIOS, depends on:
+FASwiftUI in FASwiftUI (explicit)
